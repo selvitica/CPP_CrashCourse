@@ -11,11 +11,15 @@ enum class PlayerModes {running,walking,swimmming,idle};
 
 float AddDamageFunc(float damage);
 
+void AddDamageDefault(float damage, float hitBoost=rand()%100); //two digit random num as default param //add bounds if needed
+
+void Gun9mmReload(int* gun9mmBulletReload); // integer pointer 
+
 int main()
 {
    // std::
     cout << "send it !\n";
-    
+     
 
     const int level = 1;
     int age = 42;
@@ -83,9 +87,19 @@ int main()
 
 
 //functions def goes above and declartion after!
-    //float retDamage = AddDamageFunc(100);
+    //float retDamage = AddDamageFunc(21.21);
     //cout << "Current Damage: " << retDamage;
+    //AddDamageDefault(1000); //doesn't matter value send to func
 
+
+//pointers (^_^)
+    srand(time(NULL));  //one bad way to generate random --seed change to prevent same output
+    int gun9mmBulletReload = rand()%10;
+    //
+    cout << gun9mmBulletReload <<" " << &gun9mmBulletReload<<endl;
+
+    Gun9mmReload(&gun9mmBulletReload); //pass value using & 
+    cout << gun9mmBulletReload << " " << &gun9mmBulletReload<<endl;
 
 
  system("pause>0");
@@ -100,4 +114,19 @@ int main()
 float AddDamageFunc(float damage)
 {
     return damage-10;
+}
+
+void AddDamageDefault(float damage, float hitBoost)
+{
+    cout << hitBoost;
+    //throw gcnew System::NotImplementedException();
+}
+
+void Gun9mmReload(int* gun9mmBulletReload)
+{
+    //de-ref (*  )
+     
+    (*gun9mmBulletReload) = 13;
+
+    //throw gcnew System::NotImplementedException();
 }
