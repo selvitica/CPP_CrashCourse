@@ -92,14 +92,20 @@ int main()
     //AddDamageDefault(1000); //doesn't matter value send to func
 
 
-//pointers (^_^)
+//var pointers (^_^)
+    /*
     srand(time(NULL));  //one bad way to generate random --seed change to prevent same output
     int gun9mmBulletReload = rand()%10;
-    //
+    
     cout << gun9mmBulletReload <<" " << &gun9mmBulletReload<<endl;
 
     Gun9mmReload(&gun9mmBulletReload); //pass value using & 
     cout << gun9mmBulletReload << " " << &gun9mmBulletReload<<endl;
+    */
+
+
+//array pointers (^_^)
+
 
 
  system("pause>0");
