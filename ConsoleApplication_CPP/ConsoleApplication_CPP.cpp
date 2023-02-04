@@ -7,12 +7,9 @@ using namespace std; //scope to std
 
 int main()
 {
-    std::cout << "send it !\n";
-    system("pause>0");
-    /*  shell redirection
-        Discards the standard output of the "pause" command,
-        making the program execution wait until the user presses any key without displaying any message.
-    */
+   // std::
+    cout << "send it !\n";
+    
 
     const int level = 1;
     int age = 42;
@@ -21,6 +18,31 @@ int main()
     string user = "input_user";
     bool isCollActive = true;
 
-    string weapon[100] = { "dagger", "sword", "tomahawk"};
+    string weapon[] = { "dagger", "sword", "tomahawk" }; //address/memory is continously allocated for `weapon`
+    //cout << weapon[-1]; //addr violation
+   /* cin>>weapon[0];
+    cout<<weapon[0];*/
 
-}
+    if (isCollActive)
+    {
+        cout << "collision is active";
+        
+    }
+    else
+    {
+        cout << "reset collision";
+    }
+
+
+
+
+
+
+ system("pause>0");
+ /*  shell redirection
+     Discards the standard output of the "pause" command,
+     making the program execution wait until the user presses any key without displaying any message.
+    */
+
+
+} //main ending
