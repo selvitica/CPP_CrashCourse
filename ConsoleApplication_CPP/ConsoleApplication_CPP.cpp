@@ -9,6 +9,7 @@ using namespace std; //scope to std
 enum class PlayerModes {running,walking,swimmming,idle};
 
 
+float AddDamageFunc(float damage);
 
 int main()
 {
@@ -25,7 +26,9 @@ int main()
     bool isPlayerActive = false;
 
     string weapon[] = { "dagger", "sword", "tomahawk" }; //address/memory is continously allocated for `weapon`
-    //cout << weapon[-1]; //addr violation
+    
+                                                         
+  //cout << weapon[-1]; //addr violation
    /* cin>>weapon[0];     cout<<weapon[0];*/
 
     if (isCollActive && isPlayerActive)
@@ -55,6 +58,8 @@ int main()
         break;
     }*/
 
+
+
     int counter = 10;
   /*  while (counter>0)
     {
@@ -62,16 +67,26 @@ int main()
         counter = counter - 1;
     }*/
 
+
   /*  do
     {
         cout << counter << endl;
         counter = counter - 1;
     } while (counter>0);            set or do something, then work with loop*/
 
-    for (int i = 0; i <=2; i++)
+
+
+ /*   for (int i = 0; i <=2; i++)
     {
         cout <<weapon[i] <<"\n";
-    }
+    }*/
+
+
+//functions def goes above and declartion after!
+    //float retDamage = AddDamageFunc(100);
+    //cout << "Current Damage: " << retDamage;
+
+
 
  system("pause>0");
  /*  shell redirection
@@ -81,3 +96,8 @@ int main()
 
 
 } //main ending
+
+float AddDamageFunc(float damage)
+{
+    return damage-10;
+}
