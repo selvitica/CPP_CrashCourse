@@ -7,7 +7,7 @@ using namespace std; //scope to std
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "send it !\n";
     system("pause>0");
     /*  shell redirection
         Discards the standard output of the "pause" command,
@@ -15,11 +15,12 @@ int main()
     */
 
     const int level = 1;
+    int age = 42;
     float weight = 56; //double for more precision
     char gender = 'M';
     string user = "input_user";
+    bool isCollActive = true;
 
-
-
+    string weapon[100] = { "dagger", "sword", "tomahawk"};
 
 }
