@@ -13,4 +13,13 @@ int main()
         Discards the standard output of the "pause" command,
         making the program execution wait until the user presses any key without displaying any message.
     */
+
+    const int level = 1;
+    float weight = 56; //double for more precision
+    char gender = 'M';
+    string user = "input_user";
+
+
+
+
 }
