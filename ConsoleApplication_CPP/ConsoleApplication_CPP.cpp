@@ -5,6 +5,11 @@ using namespace std; //scope to std
 
 #include <iostream>
 
+//enum int 0-running ?
+enum class PlayerModes {running,walking,swimmming,idle};
+
+
+
 int main()
 {
    // std::
@@ -16,23 +21,39 @@ int main()
     float weight = 56; //double for more precision
     char gender = 'M';
     string user = "input_user";
-    bool isCollActive = true;
+    bool isCollActive = false;
+    bool isPlayerActive = false;
 
     string weapon[] = { "dagger", "sword", "tomahawk" }; //address/memory is continously allocated for `weapon`
     //cout << weapon[-1]; //addr violation
-   /* cin>>weapon[0];
-    cout<<weapon[0];*/
+   /* cin>>weapon[0];     cout<<weapon[0];*/
 
-    if (isCollActive)
+    if (isCollActive && isPlayerActive)
     {
-        cout << "collision is active";
+        cout << "collision & player is active"<<endl;
         
     }
-    else
+    else if(isCollActive && !isPlayerActive)
     {
-        cout << "reset collision";
+        cout << "Only collision active";
     }
 
+    //Prefer enum class over enum to prevent pollution in the global namespace.
+
+    PlayerModes pm = PlayerModes::idle;
+    switch (pm)
+    {
+    case PlayerModes::running: cout << "running state ";
+        break;
+    /*case walking:
+        break;
+    case swimmming:
+        break;*/
+    case PlayerModes::idle:cout << "idle state ";
+        break;
+    default:
+        break;
+    }
 
 
 
