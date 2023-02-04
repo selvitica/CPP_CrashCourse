@@ -41,23 +41,37 @@ int main()
     //Prefer enum class over enum to prevent pollution in the global namespace.
 
     PlayerModes pm = PlayerModes::idle;
-    switch (pm)
+   /* switch (pm)
     {
     case PlayerModes::running: cout << "running state ";
         break;
-    /*case walking:
+    case walking:
         break;
     case swimmming:
-        break;*/
+        break;
     case PlayerModes::idle:cout << "idle state ";
         break;
     default:
         break;
+    }*/
+
+    int counter = 10;
+  /*  while (counter>0)
+    {
+        cout << counter << endl;
+        counter = counter - 1;
+    }*/
+
+  /*  do
+    {
+        cout << counter << endl;
+        counter = counter - 1;
+    } while (counter>0);            set or do something, then work with loop*/
+
+    for (int i = 0; i <=2; i++)
+    {
+        cout <<weapon[i] <<"\n";
     }
-
-
-
-
 
  system("pause>0");
  /*  shell redirection
