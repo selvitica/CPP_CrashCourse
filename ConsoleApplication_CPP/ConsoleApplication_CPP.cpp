@@ -129,11 +129,36 @@ int main()
 //constructor to assign values on obj construction 
     VehicleClass bmw("z3","blue");
   //  cout << bmw.vcolor << " " << bmw.vname << endl;
-    bmw.GetVehicleInfo();
+   /* bmw.GetVehicleInfo();
     bmw.PaintVehicle("green");
-    bmw.GetVehicleInfo();
+    bmw.GetVehicleInfo();*/
 
- system("pause>0");
+    //PoliceCarClass fiat( "punto", "blue");
+    //
+    //fiat.PaintVehicle("punto_red");
+    //fiat.GetVehicleInfo();
+
+
+//polymorphism a.k.a tonnivasm
+
+    GetAwayCarClass Policebmw("m3", "white");
+    Policebmw.SetVehicleStatus();
+    
+//class ptr
+
+    PoliceCarClass pc1("pc1","blue"); //dervied class obj
+    VehicleClass* gw1 =&pc1; //baseclass ptr to pc1
+    gw1->GetVehicleInfo(); //-> operator to access
+    
+
+    
+
+
+
+
+ //system("pause>0");
+ //getchar();
+ return 0;
  /*  shell redirection
      Discards the standard output of the "pause" command,
      making the program execution wait until the user presses any key without displaying any message.

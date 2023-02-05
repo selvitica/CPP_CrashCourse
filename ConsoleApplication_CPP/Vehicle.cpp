@@ -7,7 +7,11 @@ class VehicleClass
 private:
 	string vname;
 	string vcolor;
+	
+protected:
+	bool IsRacing;
 	/*Rule of encap - keep the above private and modify via functions */
+	/*Polymorphism says no */
 
 public:
 	VehicleClass(string vnameF,string vcolorF) {
@@ -27,6 +31,52 @@ public:
 		vcolor = customColorF;
 	}
 
+	void SetVehicleStatus()
+	{
+		IsRacing = false;
+		cout << "Is Racing " << IsRacing << endl;
+
+	}
+};
+
+//inherit from base which are public to it.
+class PoliceCarClass :public VehicleClass
+{
+
+public:
+	PoliceCarClass(string vnameF,string vcolorF):VehicleClass(vnameF,vcolorF)
+		//instead of initiating constructor again for policecarclass, inherit the base vehicle 
+	{
+
+	}
+
+	void SetVehicleStatus()
+	{
+		IsRacing = false; //shows inaccessible as these are currently private to base vehicle
+		//set them to protected to be accesible in derived class
+		cout << "Is Racing " << IsRacing << endl;
+
+	}
 };
 
 
+//poly demo
+class GetAwayCarClass :public VehicleClass
+{
+
+public:
+	GetAwayCarClass(string vnameF, string vcolorF) :VehicleClass(vnameF, vcolorF)
+		//instead of initiating constructor again for policecarclass, inherit the base vehicle 
+	{
+
+	}
+
+	void SetVehicleStatus()
+	{
+		IsRacing = true; //shows inaccessible as these are currently private to base vehicle
+		//set them to protected to be accesible in derived class
+		cout << "Is Racing " << IsRacing << endl;
+	}
+
+
+};
