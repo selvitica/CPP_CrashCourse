@@ -114,7 +114,7 @@ int main()
 
  //class
     //use extensions to create class faster
-  
+  /*
   VehicleClass maruti;
   maruti.vname = "alto";
   maruti.vcolor = "violet";
@@ -124,9 +124,14 @@ int main()
   audi.vname = "R8";
   audi.vcolor = "silver";
   cout << audi.vcolor << " " << audi.vname << endl;
- 
+ */
 
-
+//constructor to assign values on obj construction 
+    VehicleClass bmw("z3","blue");
+  //  cout << bmw.vcolor << " " << bmw.vname << endl;
+    bmw.GetVehicleInfo();
+    bmw.PaintVehicle("green");
+    bmw.GetVehicleInfo();
 
  system("pause>0");
  /*  shell redirection
