@@ -4,6 +4,7 @@
 using namespace std; //scope to std
 
 #include <iostream>
+#include "Vehicle.cpp"
 
 //enum int 0-running ?
 enum class PlayerModes {running,walking,swimmming,idle};
@@ -105,6 +106,25 @@ int main()
 
 
 //array pointers (^_^)
+    //int numarry[] = { 1, 2, 3, 4, 5 };
+    //int* numarrpointer;
+    //numarrpointer = numarry; //point to 1st loc //proof that array has continous mem alloc
+    //cout << *numarrpointer << endl << *numarrpointer++;
+
+
+ //class
+    //use extensions to create class faster
+  
+  VehicleClass maruti;
+  maruti.vname = "alto";
+  maruti.vcolor = "violet";
+  cout << maruti.vcolor << " " << maruti.vname<<endl;
+
+  VehicleClass audi;
+  audi.vname = "R8";
+  audi.vcolor = "silver";
+  cout << audi.vcolor << " " << audi.vname << endl;
+ 
 
 
 
